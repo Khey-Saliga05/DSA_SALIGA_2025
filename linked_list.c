@@ -1,10 +1,4 @@
-//
-// Created by Khey_Saliga on 17/09/2025.
-//
 
-//
-// Created by ACLC on 9/17/2025.
-//
 #include <stdio.h>
 #include <stdlib.h>
 
