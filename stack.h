@@ -24,3 +24,4 @@ void stack_definit(Stack *stack);
 int stack_peek(Stack *stack);
 int stack_pop(Stack *stack);
 void stack_push(Stack *stack, int data);
+int stack_is_empty(Stack *stack);

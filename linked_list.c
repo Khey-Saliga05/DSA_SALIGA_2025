@@ -10,7 +10,6 @@ void linked_list_append(LinkedList *self, void *data) {
     node->next = NULL;
 
     if (self->head == NULL) {
-        // List is empty
         self->head = node;
     } else {
         LinkedListNode *last = self->head;
@@ -24,13 +23,12 @@ void linked_list_append(LinkedList *self, void *data) {
 }
 
 void linked_list_insert(LinkedList *self, size_t index, void *data) {
-    if (index > self->size) return; // out of bounds
+    if (index > self->size) return;
 
     LinkedListNode *node = malloc(sizeof(LinkedListNode));
     node->data = data;
 
     if (index == 0) {
-        // insert at head
         node->next = self->head;
         self->head = node;
     } else {
@@ -45,7 +43,7 @@ void linked_list_insert(LinkedList *self, size_t index, void *data) {
 }
 
 void linked_list_remove(LinkedList *self, size_t index) {
-    if (index >= self->size || self->head == NULL) return; // invalid
+    if (index >= self->size || self->head == NULL) return;
 
     LinkedListNode *temp;
     if (index == 0) {
@@ -76,7 +74,7 @@ void linked_list_clear(LinkedList *self) {
 }
 
 void *linked_list_get(LinkedList *self, size_t index) {
-    if (index >= self->size) return NULL; // out of bounds
+    if (index >= self->size) return NULL;
 
     LinkedListNode *current = self->head;
     for (size_t i = 0; i < index; i++) {
